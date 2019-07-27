@@ -26,6 +26,7 @@
 ---
 
 [![Build Status](https://travis-ci.org/xav-b/mockingbird.svg?branch=master)](https://travis-ci.org/xav-b/mockingbird)
+[![codecov](https://codecov.io/gh/xav-b/mockingbird/branch/master/graph/badge.svg)](https://codecov.io/gh/xav-b/mockingbird)
 
 <br/>
 <br/>
@@ -45,7 +46,7 @@
 
 ```sh
 # all you need is 5min - let's get started
-npm install -g mockingbird
+npm install -g @hackliff/mockingbird
 
 mkdir -p nasa/scenarios && cd nasa
 ```

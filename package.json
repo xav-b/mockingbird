@@ -1,5 +1,5 @@
 {
-  "name": "mockingbird",
+  "name": "@hackliff/mockingbird",
   "version": "0.3.2",
   "description": "Realistic and Pareto-ish API mocking.",
   "main": "index.js",
