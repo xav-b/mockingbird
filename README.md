@@ -21,12 +21,12 @@
 	<br />
 	<br />
 	<br />
-	<br />
 </div>
 
 ---
 
-<br/>
+[![Build Status](https://travis-ci.org/xav-b/mockingbird.svg?branch=master)](https://travis-ci.org/xav-b/mockingbird)
+
 <br/>
 <br/>
 
