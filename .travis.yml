@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - '10.16'
+  - 'lts/*'
+#deploy:
+#- provider: npm
+#api_key: "YOUR_API_KEY"
+#secret_access_key:
+#secure: "Encypted <secret-access-key>"
+#email: "email@domain.com"
+#on: master

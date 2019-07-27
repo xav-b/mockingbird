@@ -1,0 +1,26 @@
+---
+version: '0.2.0'
+
+api_version: '1'
+title: 'Subscription service'
+description: 'Example newsletter API'
+# unused: port: 4001
+
+storage: 'json'
+
+# TODO need to be able to change scenario, customise settings, ...
+# TODO make it also possible to overwrite certain behavior, maybe middleware like feature
+scenarios:
+  - name: health
+  # will mount a complete user resource, including list, get, create, ...
+  - name: users
+    mount: '/v1'
+
+endpoints:
+  - description: 'subscribe new users'
+    method: 'POST'
+    module: './scenarios/subscribe'
+    uri: '/v1/users/:listID'
+    scenario: 'success' # success, fail
+    # TODO support min and max?
+    latency: 2000

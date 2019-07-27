@@ -1,0 +1,48 @@
+{
+  "name": "mockingbird",
+  "version": "0.3.2",
+  "description": "Realistic and Pareto-ish API mocking.",
+  "main": "index.js",
+  "bin": {
+    "mockingbird": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint index.js src/",
+    "dev": "nodemon --ext yaml,yml,js index.js serve ./_examples/newsletter",
+    "test": "npm run lint && jest"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "tool",
+    "development"
+  ],
+  "author": "Xavier Bruhiere <xavier.bruhiere@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "caporal": "^1.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "js-yaml": "^3.13.1",
+    "morgan": "^1.9.1",
+    "signale": "^1.4.0",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "taskbook": "^0.3.0",
+    "yosay": "^2.0.2"
+  }
+}
