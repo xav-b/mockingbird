@@ -28,7 +28,7 @@ function inject(options) {
   const min = options.min || 0
   const max = Math.max(options.max || 0, min)
 
-  return function(req, res, next) {
+  return (req, res, next) => {
     const wait = randomInt(min, max)
     log.success(`will delay responses by ${wait}s`)
     setTimeout(next, wait)

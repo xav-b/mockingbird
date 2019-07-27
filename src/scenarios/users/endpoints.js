@@ -21,7 +21,7 @@ const userTpl = userid => ({
 
 function listUsers(req, res) {
   if (req.db) {
-    const user = req.db.get('users', 'id', req.params.id)
+    const users = req.db.get('users')
 
     return res.status(200).json({ users })
   }
@@ -50,12 +50,12 @@ function getUser(req, res) {
   if (req.db) {
     const user = req.db.get('users', { id: req.params.id })
 
-    return res.status(200).json(user)
+    return res.status(HTTP_OK).json(user)
   }
 
   const user = transform(userTpl(req.params.id))
 
-  return res.status(200).json(user)
+  return res.status(HTTP_OK).json(user)
 }
 
 function createUser(req, res) {

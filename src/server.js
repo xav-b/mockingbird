@@ -1,3 +1,6 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -15,7 +18,7 @@ const log = new Signale({ scope: ' mockingbird.server ' })
 function build(project) {
   log.info(`setting up project ${project}`)
   // TODO caporal cli to start? Env var?
-  const config = yaml.safeLoad(fs.readFileSync(project + '/config.yml', 'utf8'))
+  const config = yaml.safeLoad(fs.readFileSync(`${project}/config.yml`, 'utf8'))
 
   // NOTE can do better.
   const whitelist = ['http://localhost:4000', 'http://localhost:3001']
@@ -29,10 +32,9 @@ function build(project) {
   app.use(bodyParser.json())
 
   // adjust user-defined modules
-  config.endpoints.forEach(
-    (endpoint, idx) =>
-      (config.endpoints[idx].module = process.cwd() + '/' + project + '/' + endpoint.module + '.js')
-  )
+  config.endpoints.forEach((endpoint, idx) => {
+    config.endpoints[idx].module = `${process.cwd()}/${project}/${endpoint.module}.js`
+  })
 
   // append built-in scenarios to the endpoints list
   config.scenarios.forEach((scenario, idx) => {
@@ -40,15 +42,14 @@ function build(project) {
     const specs = require(`./scenarios/${scenario.name}/specs.js`)
     specs.endpoints.forEach(endpoint => {
       // overwrite uri if it was provided
-      base_uri = config.scenarios[idx].mount || specs.base_uri || ''
+      const baseUri = config.scenarios[idx].mount || specs.base_uri || ''
       // TODO add '/' if necessary
-      endpoint.uri = base_uri + endpoint.uri
+      endpoint.uri = baseUri + endpoint.uri
 
       config.endpoints.push(endpoint)
     })
   })
 
-  console.log(config.endpoints.map(endpoint => endpoint.module))
   // API explorer setup
   const swaggerSpec = swaggerJSDoc({
     definition: {
