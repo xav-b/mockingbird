@@ -31,16 +31,22 @@
 <br/>
 <br/>
 
-## Highlight
+## ✨ Highlight
 
-- [x] Declarative API description
-- [x] Endpoints as code to fit all use cases
-- [x] Generate data - on the fly or beforehand for more control
-- [x] Easily switch scenarios to simulate different use cases
-- [x] Support swagger to easily share and interact with the API contract
-- [x] Emulate complex scenarios:
-  - request delays
-  - [todo] authentication
+✔️ Declarative API description
+
+✔️ Endpoints as code to fit all use cases
+
+✔️ Generate data - on the fly or beforehand for more control
+
+✔️ Easily switch scenarios to simulate different use cases
+
+✔️ Support swagger to easily share and interact with the API contract
+
+✔️ Emulate complex scenarios:
+
+- request delays
+- [todo] authentication
 
 ## In a Nutshell
 
@@ -95,7 +101,7 @@ endpoints:
 
 ## Workflow
 
-### Release
+### 🚀 Release
 
 We follow a few industry standards.
 
@@ -117,7 +123,24 @@ Then use it as indicated on the github readme: `npx tb -i`.
 
 ---
 
+<img
+  width="50px"
+  alt="profile"
+  src="https://it.gravatar.com/userimage/51922459/c5e521b1b03eabff18b3763bcdfef8ff.jpeg"
+  align="right" />
+
+### 💖 Shameless plug
+
+> Hey nice to meet you, I'm [Xavier](www.xav-b.fr) and I maintain this project.
+
+<a href="https://www.buymeacoffee.com/xavb" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+&nbsp;&nbsp;&nbsp;<a target="_blank"
+href="https://tinyletter.com/Xav"><img width="38px" alt="subscribe"
+src="https://newvitruvian.com/images/svg-buttons-web-1.png"/></a>
+
 <div align="center">
+	<br>
+	<br>
 	<br>
 	<br>
   <sub>Mockingbird - API mocker
@@ -133,7 +156,7 @@ Then use it as indicated on the github readme: `npx tb -i`.
 	<br>
 	<br>
 	<img
-		src="https://github.com/xav-b/on-a-budget/raw/master/assets/vespa.svg"
+		src="https://github.com/xav-b/on-a-budget/blob/master/assets/vespa.svg"
 		width="48"
 		alt="TIC logo" />
 	<br>
